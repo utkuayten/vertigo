@@ -28,7 +28,7 @@ The figure shows simulated DAU for Variant A and Variant B over the first 30 day
 
 * Variant A starts stronger during the first 7–8 days due to higher early retention (D1 and D3).
 * Around Day 9–10, Variant B overtakes Variant A.
-* From that point onward, Variant B maintains a consistently higher DAU.
+* **From that point onward, Variant B maintains a consistently higher DAU.**
 
 # b) Which variant will earn the most total money by Day 15?
 ![01_task1_revenue_3.png](figs/01_task1_revenue_3.png)
@@ -90,7 +90,7 @@ All analyses were implemented in:
 ![02_task2_active_days.png](figs/02_task2_active_days.png)
 The dataset contains 7,293,526 events across 2,453,499 unique users.
 
-We analyzed the number of distinct active days per user. The results show:
+I analyzed the number of distinct active days per user. The results show:
 * 51.3% of users were active for only 1 day
 * 29.6% for 2–3 days
 * 12.1% for 4–7 days
@@ -114,7 +114,7 @@ The stickiness metric (DAU/MAU) shows a sharp initial decline, stabilizing aroun
 
 # Engagement Segmentation
 ![02_task2_engagement_score.png](figs/02_task2_engagement_score.png)
-To better understand behavioral differences across users, we segmented the population based on their first-day engagement level. The engagement score was constructed using early activity metrics such as session count, session duration, match activity
+To better understand behavioral differences across users, I segmented the population based on their first-day engagement level. The engagement score was constructed using early activity metrics such as session count, session duration, match activity
 
 ![02_task2_metrics_segmented.png](figs/02_task2_metrics_segmented.png)
 All key metrics increase consistently from Low to High engagement segments. High-engagement users have more sessions, longer playtime, more matches, and significantly higher IAP and total revenue.
@@ -125,6 +125,7 @@ The DAU composition shows that High and Medium-High engagement users contribute 
 ![02_task2_retention_segmented.png](figs/02_task2_retention_segmented.png)
 The retention curves clearly show a strong relationship between first-day engagement and long-term retention. Users in the High engagement segment maintain significantly higher retention across all 30 days, while the Low engagement segment drops off rapidly after installation. The separation between segments remains consistent over time, indicating that early engagement quality strongly predicts long-term user survival.
 
+![02_task2_revenue_contribution_segmented.png](figs/02_task2_revenue_contribution_segmented.png)
 ![02_task2_revenue_distrubition.png](figs/02_task2_revenue_distrubition.png)
 Among paying users, the High engagement segment shows both higher median revenue and a wider revenue spread compared to other groups. While Low and Medium segments generate smaller and more concentrated spending amounts, High-engagement users exhibit greater variability and higher upper-end revenue values.
 
@@ -145,7 +146,6 @@ Session duration is relatively stable across the observed period, with mild fluc
 ![02_task2_session_lifecycle.png](figs/02_task2_session_lifecycle.png)
 The lifecycle analysis shows that average session duration gradually increases over the first 30 days after installation. Both the mean and median trend upward, indicating that users who survive the early churn phase tend to engage more deeply over time. The 25–75 percentile band also widens slightly, suggesting increasing variability among retained users.
 
-
 ![02_task2_session_weekday.png](figs/02_task2_session_weekday.png)
 Average session duration remains relatively stable across weekdays, with only minor variation between days. Midweek (especially Wednesday) shows slightly higher average session length, while Friday and Saturday are marginally lower. Overall, there is no strong weekday seasonality effect.
 
@@ -156,3 +156,6 @@ Average session duration remains relatively stable across weekdays, with only mi
 
 ![02_task2_winrate_vs_revenue.png](figs/02_task2_winrate_vs_revenue.png)
 <br>Users with extremely high win rates (~100%) do not generate the highest revenue. Instead, the highest spenders tend to have moderate-to-high win rates, not perfect ones.
+
+![02_task2_revenue_vs_retention.png](figs/02_task2_revenue_vs_retention.png)
+Users with very few active days mostly generate near-zero revenue. As the number of active days increases, the probability of higher revenue also increases. The highest revenue outliers are concentrated among users with 20+ active days, indicating that long-term retention strongly correlates with monetization.
